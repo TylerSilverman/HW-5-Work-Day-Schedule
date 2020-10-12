@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-var timeNow = moment().format('MMMM Do, YYYY');
+var timeNow = moment().format('LLLL');
 $("#date").text(timeNow);
 
 
