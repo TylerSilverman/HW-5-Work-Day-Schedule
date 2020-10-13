@@ -18,14 +18,20 @@ $('.saveBtn').on('click', function() {
    console.log(buttonClicked);
 
 });
-// funtion for storing the save information 
+//Saving in the text area 
 
-// var information = localStorage.getItem("storedItem");
+// var buttonClicked = $('#information').val();
 
-// function buttonClicked(){
+// localStorage.setItem("information", information);
 
-//   var information = document.getElementById("input").value;
+// document.getElementById("results").innerHTML = localStorage.getItem = $ {text + information};
 
-//   localStorage.setItem("storedItem", information);
-//   document.getElementById("saveText").innerHTML = item + " save";
+// $(".saveBtn").on("click", function(){
+
+//   $("#textarea").text(buttonClicked);
+// });
+
+// function myFunction () {
+//   var text = document.getElementById("information").value;
+//   document.getElementById(" ").innerHTML = text;
 // }
