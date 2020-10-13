@@ -1,5 +1,5 @@
 // const saveBtn = document.getElementById("save-btn");
-var saveBtn = document.querySelector("save")
+var saveBtn = document.getElementById("save")
 
 $(document).ready(function(){
     
