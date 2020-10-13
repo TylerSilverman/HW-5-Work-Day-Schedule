@@ -1,6 +1,3 @@
-// const saveBtn = document.getElementById("save-btn");
-var saveBtn = document.getElementById("save")
-
 $(document).ready(function(){
     
 var timeNow = moment().format('LLLL');
@@ -12,8 +9,10 @@ var timeNow = moment().hour();
 })
 
 
-document.getElementById("saveBtn").addEventListener("click", function() {
-    document.getElementById("bookedInformation").innerHTML = "#texterea";
-  }
-  );
+$('.saveBtn').on('click', function() {
+   console.log('save button clicked');
 
+   var buttonClicked = $(this);
+   console.log(buttonClicked);
+
+});

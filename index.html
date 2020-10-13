@@ -23,23 +23,25 @@
   </head>
 
   <body>
+    <!-- Header Section -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
       <h3 id="date"></h3>
     </header>
+
    <!-- Timeblocks go here -->
     <div class="container">
-      <div class ="form-row">
+      <div class ="row">
           <div class="col-md hour">
             9:00 AM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" id="bookedInformation" row="3" placeholder = "Schedule Events Here"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here"  row="3"></textarea>
           </div>
           <div class="col-md">
-            <button id="saveBtn" type="button" type="submit" value="Save"  class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
@@ -50,10 +52,10 @@
             10:00 AM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" placeholder = "Schedule Events Here" id="bookedInformation" row="3"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here" row="3"></textarea>
           </div>
           <div class="col-md">
-            <button id="saveBtn" type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
@@ -64,10 +66,10 @@
             11:00 AM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" placeholder = "Schedule Events Here" id="bookedInformation" row="3"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here"  row="3"></textarea>
           </div>
           <div class="col-md">
-            <button type="button" type="submit" id="saveBtn"  class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
@@ -78,10 +80,10 @@
             12:00 PM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" placeholder = "Schedule Events Here" id="bookedInformation" row="3"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here" row="3"></textarea>
           </div>
           <div class="col-md">
-            <button type="button" type="submit" id="saveBtn"  class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
@@ -92,10 +94,10 @@
             1:00 PM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" placeholder = "Schedule Events Here" id="bookedInformation" row="3"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here"  row="3"></textarea>
           </div>
           <div class="col-md">
-            <button type="button" type="submit" id="saveBtn"  class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
@@ -106,10 +108,10 @@
             2:00 PM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" placeholder = "Schedule Events Here" id="bookedInformation" row="3"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here" row="3"></textarea>
           </div>
           <div class="col-md">
-            <button type="button" type="submit" id="saveBtn"  class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
@@ -120,10 +122,10 @@
             3:00 PM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" placeholder = "Schedule Events Here" id="bookedInformation" row="3"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here"  row="3"></textarea>
           </div>
           <div class="col-md">
-            <button type="button" type="submit" id="saveBtn"  class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
@@ -134,10 +136,10 @@
             4:00 PM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" placeholder = "Schedule Events Here" id="bookedInformation" row="3"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here" row="3"></textarea>
           </div>
           <div class="col-md">
-            <button type="button" type="submit" id="saveBtn"  class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
@@ -148,13 +150,18 @@
             5:00 PM
           </div>
           <div class="col-md-8 textarea past present future description" row="8">
-            <textarea class="information" placeholder = "Schedule Events Here" id="bookedInformation" row="3"></textarea>
+            <textarea class="information" placeholder = "Schedule Events Here" row="3"></textarea>
           </div>
           <div class="col-md">
-            <button type="button" type="submit" id="saveBtn"  class="btn saveBtn btn-primary" row="1">Save</button>
+            <button type="button" type="submit" value="Save" class="btn saveBtn btn-primary" row="1">Save</button>
           </div> 
         </div>
     </div>
+    
+    
+  
+
+    <!-- javascript section -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js" type="text/javascript"></script>
