@@ -1,9 +1,3 @@
-const buttonClicked = document.querySelector('.saveBtn');
-const textarea = document.querySelector ('.textarea');
-const localStorage = document.querySelector('.storage');
-const text = document.querySelector('.text');
-
-
 // Function for setting the time
 
 $(document).ready(function(){
@@ -30,13 +24,12 @@ $('.saveBtn').on('click', function() {
 
 
 //function for saving text 
-$('.description').on('click', function(){
 
 
-   var textereaContent = button.parent().siblings('.textarea').find('.information').val();
-   console.log(textereaContent);
+//    // var textereaContent = button.parent().siblings('.textarea').find('.information').val();
+//    // console.log(textereaContent);
 
-})
+// })
 // console.log("schedule events in textbox");
 
 // funtion for setting the color's based on the hours
@@ -57,8 +50,20 @@ $('.description').on('click', function(){
 //   console.log("color of the hour")
 // })
 
-// function ChangeBackgroundColor(backgroundColor) {
-//   document.body.style.background = color;
+// $('.description').each(function(){
+//    var descriptionEl = $(this);
+//    console.log(descriptionEl);
+
+//    var hour = descriptionEl.parent().find(".hour").attr("data-hour");
+//    console.log(hour);
+
+// })
+
+// // function ChangeBackgroundColor(backgroundColor) {
+// //   document.body.style.background = color;
+// function ChangeBackgroundColor (){
+//    console.log(moment().hours());
+// }
  
 // }
 // window.addEventListener("load",function() { changeBackground('.present', '.past', '.future') });
