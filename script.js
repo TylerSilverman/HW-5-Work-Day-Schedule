@@ -1,5 +1,7 @@
-var buttonClicked = document.querySelector("save");
-var textarea = document.getElementById ("textarea");
+const buttonClicked = document.querySelector('.saveBtn');
+const textarea = document.querySelector ('.textarea');
+const localStorage = document.querySelector('.storage');
+const text = document.querySelector('.text');
 
 
 // Function for setting the time
@@ -14,27 +16,28 @@ var timeNow = moment().hour();
 
 })
 
-//Saving in the text area 
-
-var texterea = $("#information").val();
-console.log("schedule events in textbox");
-
 // clientInformation.getElementById(" ").innerHTML = text;
 
 // function for the save button 
 
 $('.saveBtn').on('click', function() {
-   console.log('save button clicked');
+   console.log('saveBtn clicked');
 
    var buttonClicked = $(this);
    console.log(buttonClicked);
 
 });
 
-//function for saving text 
 
-var texterea = buttonClicked.parent().siblings('.textarea').find('.information').val();
-console.log(texterea);
+//function for saving text 
+$('.description').on('click', function(){
+
+
+   var textereaContent = button.parent().siblings('.textarea').find('.information').val();
+   console.log(textereaContent);
+
+})
+// console.log("schedule events in textbox");
 
 // funtion for setting the color's based on the hours
 
