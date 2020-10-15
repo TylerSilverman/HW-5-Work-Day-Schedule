@@ -1,3 +1,43 @@
+//variable for hoursPerDay
+var hoursPerday = [
+   {
+      id: "hour9am",
+      textInformation: "",
+   },
+   {
+      id: "hour10am",
+      textInformation: "",
+   },
+   {
+      id: "hour11am",
+      textInformation: "",
+   },
+   {
+      id: "hour12pm",
+      textInformation: "",
+   },
+   {
+      id: "hour1pm",
+      textInformation: "",
+   },
+   {
+      id: "hour2pm",
+      textInformation: "",
+   },
+   {
+      id: "hour3pm",
+      textInformation: "",
+   },
+   {
+      id: "hour4pm",
+      textInformation: "",
+   },
+   {
+      id: "hour5pm",
+      textInformation: "",
+   },
+]
+
 // Function for setting the time
 
 $(document).ready(function(){
@@ -10,15 +50,23 @@ var timeNow = moment().hour();
 
 })
 
-// clientInformation.getElementById(" ").innerHTML = text;
-
 // function for the save button 
 
-$('.saveBtn').on('click', function() {
+function textInformation () {
+   localStorage.setItem("hoursPerDay", JSON.stringify(hoursPerday));
+}
+
+$('.saveBtn').on('click', function(event) {
    console.log('clicked Save Button');
 
-   var buttonClicked = $(this);
-   console.log(buttonClicked);
+   var buttonClicked = $(this).siblings(".description").children(".past", ".present", ".future").attr("id");
+   console.log(textInformation);
+
+   // textInformation[buttonClicked].localStorage = $(this).siblings(".description").children(".past", ".present", ".future").val ();
+   // console.log(buttonClicked);
+
+   textInformation();
+   // displayInformation ();
 
 });
 
@@ -26,11 +74,16 @@ $('.saveBtn').on('click', function() {
 
 // var textereaContent = buttonClicked.parent().siblings('.textarea').find('.information').val();
 
-$('.texterea').on("click". function,)
-console.log("textereaContent");
+$('.texterea').on("click". function);
 
 
-
+var curremtDayHour = JSON.parse(localStorage.getItem("hoursPerDay"));{
+   if (curremtDayHour) {
+      hoursPerday = curremtDayHour;
+      // console.log("information saved per hour");
+      // console.log("schedule events in textbox");
+   }
+};
 
 
 
@@ -56,7 +109,6 @@ console.log("textereaContent");
 // });
 
 // })
-// console.log("schedule events in textbox");
 
 // funtion for setting the color's based on the hours
 
