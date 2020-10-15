@@ -46,3 +46,17 @@ var hoursPerday = [
     },
  ]
 
+ //function to set up the time 
+
+ $(document).ready(function(){
+    
+    var timeNow = moment().format('LLLL');
+    $("#date").text(timeNow);
+    
+    
+    var timeNow = moment().hour();
+    
+});
+
+
+
