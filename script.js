@@ -7,34 +7,42 @@ var hoursPerday = [
    {
       id: "hour10am",
       textInformation: "",
+      time: "10am",
    },
    {
       id: "hour11am",
       textInformation: "",
+      time: "11am",
    },
    {
       id: "hour12pm",
       textInformation: "",
+      time: "12pm",
    },
    {
       id: "hour1pm",
       textInformation: "",
+      time: "1pm",
    },
    {
       id: "hour2pm",
       textInformation: "",
+      time: "2pm",
    },
    {
       id: "hour3pm",
       textInformation: "",
+      time: "3pm",
    },
    {
       id: "hour4pm",
       textInformation: "",
+      time: "4pm",
    },
    {
       id: "hour5pm",
       textInformation: "",
+      time: "5pm",
    },
 ]
 
@@ -50,44 +58,62 @@ var timeNow = moment().hour();
 
 })
 
-// function for the save button 
+// function for the save data
 
-function textInformation () {
+function dataSaved () {
    localStorage.setItem("hoursPerDay", JSON.stringify(hoursPerday));
 }
 
+//function for save button 
+
+init ();
+
+//function to show save data
+
+function displayDataSavedInformation() {
+   console.log(localStorage);
+};
+
 $('.saveBtn').on('click', function(event) {
-   console.log('clicked Save Button');
+   event.preventDefault ();
 
-   var buttonClicked = $(this).siblings(".description").children(".past", ".present", ".future").attr("id");
-   console.log(textInformation);
+   var textereaContent = $(this).siblings(".description").children(".hour").attr("id");
 
-   // textInformation[buttonClicked].localStorage = $(this).siblings(".description").children(".past", ".present", ".future").val ();
-   // console.log(buttonClicked);
+   textereaContent[buttonClicked].parent = $(this).siblings(".description").children(".hour").val ();
+   console.log(buttonClicked);
 
-   textInformation();
-   // displayInformation ();
-
+   dataSaved();
+   displayDataSavedInformation ();
 });
 
+  
+
 // var buttonClicked = document.getElementById ('.hour9am');
+ // console.log(textInformation);
 
 // var textereaContent = buttonClicked.parent().siblings('.textarea').find('.information').val();
 
 $('.texterea').on("click". function);
 
-
 var curremtDayHour = JSON.parse(localStorage.getItem("hoursPerDay"));{
    if (curremtDayHour) {
       hoursPerday = curremtDayHour;
-      // console.log("information saved per hour");
-      // console.log("schedule events in textbox");
+      console.log(dataSaved);
    }
 };
 
-
-
 //function for saving text 
+
+function init () {
+   var curremtDayHour = JSON.parse(localStorage.getItem("hoursPerDay"));
+
+   if (curremtDayHour) {
+      hoursPerDay = curremtDayHour;
+   }
+   dataSaved();
+   displayDataSavedInformation ();
+
+};
 // $(document).on('.saveBtn', 'texterea', function(event){
 //    event.preventDefault();
 
@@ -111,6 +137,7 @@ var curremtDayHour = JSON.parse(localStorage.getItem("hoursPerDay"));{
 // })
 
 // funtion for setting the color's based on the hours
+
 
 // var hour = currentTimeNow;
 // var hourPast = hourPast < currentTimeNow;
@@ -144,10 +171,10 @@ var curremtDayHour = JSON.parse(localStorage.getItem("hoursPerDay"));{
 // }
  
 // }
-// window.addEventListener("load",function() { changeBackground('.present', '.past', '.future') });
 
 // $('#changeColorButton').click(function() {
 //   var color = $('#changeColorSelect').val();
 //   console.log(color)
-  // $('body').css("background-color",color);
-  // localStorage.setItem('background', color);
+//   $('body').css("background-color",color);
+//   localStorage.setItem('background', color);
+// });
