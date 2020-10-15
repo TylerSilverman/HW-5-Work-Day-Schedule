@@ -71,7 +71,7 @@ var hoursPerDay = [
 // function to set up save button 
 $(document).ready(function(){
     $(".saveBtn").click(function(){
-        console.log('button clicked');
+        console.log("save button cliked");
     });
 });
 
@@ -129,37 +129,36 @@ $(document).ready(function(){
         var textInformation = $.trim($("#textInformation5pm").val());
         if (textInformation !=""){
             console.log(textInformation);
-        }
+        };
     });
 });
 
 //save to local storage and then get it from local storage 
-// if (localStorage["textInformation"]){
-//     var texta = localStorage["textbox"];
-//     document.getElementById("textbo")
-// }
+    var textInformation = localStorage["textbox"];
+    document.getElementById("textbox")
 
 //function for setting up background color in the textbox, also changed the time to militaryT:
 $(document).ready(function(){
     
-    var curremt = moment().hour();
-    $("#time-block").text(curremt);
+    var timeNow = moment().hour();
+    $("#time-block").text(timeNow);
 
-    var current = moment().hour();  
+    var timeNow = moment().hour();  
 });
 
 // var hoursPerDay:[
 // {militaryT:09},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
 // ];
+// console.log(hoursPerDay);
 
 
 function checkTime () {
-    curremt = moment().hour();
+    timeNow = moment().hour();
     hoursPerDay.forEach(function (){
 
-        if (militaryT < curremt){
-            $('document').addClass('.hour','.past');
-        }else if (militaryT === curremt) {
+        if (militaryT < timeNow){
+            $('.document').addClass('.hour','.past');
+        }else if (militaryT === timeNow) {
             $('document').addClass('.hour','.presemt');
         } else {
             $('document').addClass('.hour','.future');
