@@ -15,19 +15,45 @@ var timeNow = moment().hour();
 // function for the save button 
 
 $('.saveBtn').on('click', function() {
-   console.log('saveBtn clicked');
+   console.log('clicked Save Button');
 
    var buttonClicked = $(this);
    console.log(buttonClicked);
 
 });
 
+// var buttonClicked = document.getElementById ('.hour9am');
+
+// var textereaContent = buttonClicked.parent().siblings('.textarea').find('.information').val();
+
+$('.texterea').on("click". function,)
+console.log("textereaContent");
+
+
+
+
+
 
 //function for saving text 
+// $(document).on('.saveBtn', 'texterea', function(event){
+//    event.preventDefault();
 
-
-//    // var textereaContent = button.parent().siblings('.textarea').find('.information').val();
-//    // console.log(textereaContent);
+//    var document = $(this).attr("saveBtn");
+//    $.ajax ({
+//       url: html,
+//       type: 'POST',
+//       dataType: 'JSON',
+//       data: new FormData(this),
+//       processData: true,
+//       contentType: true,
+//       success: function (data, status){
+//          console.log("it works")
+//       },
+//       error: function (xhr,description, error){
+//          console.log("error didnt work");
+//       }
+//    });
+// });
 
 // })
 // console.log("schedule events in textbox");
