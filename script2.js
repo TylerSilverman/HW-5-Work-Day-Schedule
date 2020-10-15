@@ -134,8 +134,13 @@ $(document).ready(function(){
 });
 
 //save to local storage and then get it from local storage 
-    var textInformation = localStorage["textbox"];
-    document.getElementById("textbox")
+    $('#hour9am').click(function(){
+        var save = $("#textInformation9am").val();
+
+        document.getElementById("textInformation9am").innerHTML = save;
+
+        alert("events are saved, correctly!");
+    });
 
 //function for setting up background color in the textbox, also changed the time to militaryT:
 $(document).ready(function(){
@@ -149,7 +154,6 @@ $(document).ready(function(){
 // var hoursPerDay:[
 // {militaryT:09},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
 // ];
-// console.log(hoursPerDay);
 
 
 function checkTime () {
