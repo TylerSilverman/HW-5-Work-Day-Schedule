@@ -1,5 +1,5 @@
 // variable for hoursPerDay
-var time = [
+var hoursPerDay = [
     {
        id: "hour9am",
        militaryT: "09",
@@ -134,17 +134,38 @@ $(document).ready(function(){
 });
 
 //save to local storage and then get it from local storage 
-
+// if (localStorage["textInformation"]){
+//     var texta = localStorage["textbox"];
+//     document.getElementById("textbo")
+// }
 
 //function for setting up background color in the textbox, also changed the time to militaryT:
+$(document).ready(function(){
+    
+    var curremt = moment().hour();
+    $("#time-block").text(curremt);
 
-// $(document).ready(function(){
-// var currentMilitaryT = moment().hour();
+    var current = moment().hour();  
+});
 
-// if (currentMilitaryT > time);
-// else(.past);
-// )};
+// var hoursPerDay:[
+// {militaryT:09},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
+// ];
 
+
+function checkTime () {
+    curremt = moment().hour();
+    hoursPerDay.forEach(function (){
+
+        if (militaryT < curremt){
+            $('document').addClass('.hour','.past');
+        }else if (militaryT === curremt) {
+            $('document').addClass('.hour','.presemt');
+        } else {
+            $('document').addClass('.hour','.future');
+        };
+    });
+};
 
 
 
