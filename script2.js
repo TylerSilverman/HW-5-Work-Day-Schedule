@@ -58,5 +58,19 @@ var hoursPerday = [
     
 });
 
+// function to set up save button 
+$(document).ready(function(){
+    $(".saveBtn").click(function(){
+        console.log('button clicked');
+    });
+});
+
+
+
+
+
+
+
+
 
 
