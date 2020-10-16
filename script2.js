@@ -187,7 +187,7 @@ function setColor () {
             $(this).addClass("past");
         } else if (parseInt(blockLabelTime) === currentTime) {
             $(this).removeClass("past");
-            $(this).removeClass("future");
+            // $(this).removeClass("future");
             $(this).addClass("present");
         } else {
             $(this).removeClass('past');
@@ -200,7 +200,7 @@ function setColor () {
 
     setInterval(setColor, 60000);
 
-
+//1000 = 1 second 
 
 
 
