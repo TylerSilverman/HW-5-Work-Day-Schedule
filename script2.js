@@ -75,100 +75,63 @@ $(document).ready(function(){
     });
 });
 
-// function for textbox info for each time to save when clicking save button and also the function to remove the text and console.log the information
+//save to local storage and then get it from local storage // function for textbox info for each time to save when clicking save button and also the function to remove the text and console.log the information
 $(document).ready(function(){
-    $(".saveBtn").click(function(){
-        var textInformation9am = $.trim($("#textInformation9am").val());
-        if (textInformation9am !=""){
-            console.log(textInformation9am);
-        } 
+    $('#hour9am').click(function(){
+        var textInformation9am = $("#textInformation9am").val();
+        document.getElementById("textInformation9am").innerHTML = localStorage;;
+        console.log(textInformation9am + " " + "Events are saved!");
         $("#textInformation9am").val("");
     });
-    $(".saveBtn").click(function(){
-        var textInformation10am = $.trim($("#textInformation10am").val());
-        if (textInformation10am !=""){
-            console.log(textInformation10am);
-        } 
-        $("#textInformation10am").val(""); 
+    $('#hour10am').click(function(){
+        var textInformation10am = $("#textInformation10am").val();
+        document.getElementById("textInformation10am").innerHTML = localStorage;;
+        console.log(textInformation10am + " " + "events are saved!");
+        $("#textInformation10am").val("");
     });
-    $(".saveBtn").click(function(){
-        var textInformation11am = $.trim($("#textInformation11am").val());
-        if (textInformation11am !=""){
-            console.log(textInformation11am);
-        }
+    $('#hour11am').click(function(){
+        var textInformation11am = $("#textInformation11am").val();
+        document.getElementById("textInformation11am").innerHTML = localStorage;;
+        console.log(textInformation11am + " " + "Events are saved!");
         $("#textInformation11am").val("");
     });
-    $(".saveBtn").click(function(){
-        var textInformation12pm = $.trim($("#textInformation12pm").val());
-        if (textInformation12pm !=""){
-            console.log(textInformation12pm);
-        }
+    $('#hour12pm').click(function(){
+        var textInformation12pm = $("#textInformation12pm").val();
+        document.getElementById("textInformation12pm").innerHTML = localStorage;;
+        console.log(textInformation12pm + " " + "events are saved!");
         $("#textInformation12pm").val("");
     });
-    $(".saveBtn").click(function(){
-        var textInformation1pm = $.trim($("#textInformation1pm").val());
-        if (textInformation1pm !=""){
-            console.log(textInformation1pm);
-        }
+    $('#hour1pm').click(function(){
+        var textInformation1pm = $("#textInformation1pm").val();
+        document.getElementById("textInformation1pm").innerHTML = localStorage;;
+        console.log(textInformation1pm + " " + "Events are saved!");
         $("#textInformation1pm").val("");
     });
-    $(".saveBtn").click(function(){
-        var textInformation2pm = $.trim($("#textInformation2pm").val());
-        if (textInformation2pm !=""){
-            console.log(textInformation2pm);
-        }
+    $('#hour2pm').click(function(){
+        var textInformation2pm = $("#textInformation2pm").val();
+        document.getElementById("textInformation2pm").innerHTML = localStorage;;
+        console.log(textInformation2pm + " " + "events are saved!");
         $("#textInformation2pm").val("");
     });
-    $(".saveBtn").click(function(){
-        var textInformation3pm = $.trim($("#textInformation3pm").val());
-        if (textInformation3pm !=""){
-            console.log(textInformation3pm);
-        }
+    $('#hour3pm').click(function(){
+        var textInformation3pm = $("#textInformation3pm").val();
+        document.getElementById("textInformation3pm").innerHTML = localStorage;;
+        console.log(textInformation3pm + " " + "Events are saved!");
         $("#textInformation3pm").val("");
     });
-    $(".saveBtn").click(function(){
-        var textInformation4pm = $.trim($("#textInformation4pm").val());
-        if (textInformation4pm !=""){
-            console.log(textInformation4pm);
-        }
+    $('#hour4pm').click(function(){
+        var textInformation4pm = $("#textInformation4pm").val();
+        document.getElementById("textInformation4pm").innerHTML = localStorage;;
+        console.log(textInformation4pm + " " + "events are saved!");
         $("#textInformation4pm").val("");
     });
-    $(".saveBtn").click(function(){
-        var textInformation5pm = $.trim($("#textInformation5pm").val());
-        if (textInformation5pm !=""){
-            console.log(textInformation5pm);
-        };
+    $('#hour5pm').click(function(){
+        var textInformation5pm = $("#textInformation5pm").val();
+        document.getElementById("textInformation5pm").innerHTML = localStorage;;
+        console.log(textInformation5pm + " " + "events are saved!");
         $("#textInformation5pm").val("");
     });
 });
-
-//save to local storage and then get it from local storage
-    $('#hour9am').click(function(){
-        var textInformation9am = $("#textInformation9am").val();
-
-        document.getElementById("textInformation9am").innerHTML = localStorage;;
-
-        console.log("events are saved, correctly!");
-    });
-    $('#hour10am').click(function(){
-        var textInformation = $("#textInformation10am").val();
-
-        document.getElementById("textInformation10am").innerHTML = localStorage;;
-
-        console.log("events are saved, correctly!");
-    });
-
-    // trying another funtion to savelocal storage inside the HTML 
-
-    // $('#hour9am').click(function(){
-    //     var textInformation = $("#textInformation9am").val();
-
-    //     document.getElementById("textInformation9am").innerHTML = localStorage;;
-
-    //     console.log("events are saved, correctly!");
-    // });
-
-
 //function for setting up background color in the textbox, also changed the time to militaryT:
 $(document).ready(function(){
     
@@ -189,7 +152,7 @@ function checkTime () {
 
         if (militaryT < timeNow){
             $('.document').addClass('.hour','.past');
-        }else if (militaryT === timeNow) {
+        }else if (militaryT === timeNow){
             $('document').addClass('.hour','.presemt');
         } else {
             $('document').addClass('.hour','.future');
