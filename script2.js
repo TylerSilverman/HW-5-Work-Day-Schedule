@@ -75,61 +75,48 @@ $(document).ready(function(){
     });
 });
 
+
+
+// adding the function to save for the local stoarge
 //save to local storage and then get it from local storage // function for textbox info for each time to save when clicking save button and also the function to remove the text and console.log the information
 $(document).ready(function(){
     $('#hour9am').click(function(){
         var textInformation9am = $("#textInformation9am").val();
-        document.getElementById("textInformation9am").innerHTML = localStorage;;
         console.log(textInformation9am + " " + "Events are saved!");
-        $("#textInformation9am").val("");
+        localStorage.setItem("#textInformation9am", textInformation9am);
     });
     $('#hour10am').click(function(){
         var textInformation10am = $("#textInformation10am").val();
-        document.getElementById("textInformation10am").innerHTML = localStorage;;
         console.log(textInformation10am + " " + "events are saved!");
-        $("#textInformation10am").val("");
+        localStorage.setItem("#textInformation10am", textInformation10am);
     });
     $('#hour11am').click(function(){
         var textInformation11am = $("#textInformation11am").val();
-        document.getElementById("textInformation11am").innerHTML = localStorage;;
         console.log(textInformation11am + " " + "Events are saved!");
-        $("#textInformation11am").val("");
     });
     $('#hour12pm').click(function(){
         var textInformation12pm = $("#textInformation12pm").val();
-        document.getElementById("textInformation12pm").innerHTML = localStorage;;
         console.log(textInformation12pm + " " + "events are saved!");
-        $("#textInformation12pm").val("");
     });
     $('#hour1pm').click(function(){
         var textInformation1pm = $("#textInformation1pm").val();
-        document.getElementById("textInformation1pm").innerHTML = localStorage.getItem;;
         console.log(textInformation1pm + " " + "Events are saved!");
-        $("#textInformation1pm").val("");
     });
     $('#hour2pm').click(function(){
         var textInformation2pm = $("#textInformation2pm").val();
-        document.getElementById("textInformation2pm").innerHTML = localStorage;;
         console.log(textInformation2pm + " " + "events are saved!");
-        $("#textInformation2pm").val("");
     });
     $('#hour3pm').click(function(){
         var textInformation3pm = $("#textInformation3pm").val();
-        document.getElementById("textInformation3pm").innerHTML = localStorage;;
         console.log(textInformation3pm + " " + "Events are saved!");
-        $("#textInformation3pm").val("");
     });
     $('#hour4pm').click(function(){
         var textInformation4pm = $("#textInformation4pm").val();
-        document.getElementById("textInformation4pm").innerHTML = localStorage;;
         console.log(textInformation4pm + " " + "events are saved!");
-        $("#textInformation4pm").val("");
     });
     $('#hour5pm').click(function(){
         var textInformation5pm = $("#textInformation5pm").val();
-        document.getElementById("textInformation5pm").innerHTML = localStorage;;
         console.log(textInformation5pm + " " + "events are saved!");
-        $("#textInformation5pm").val("");
     });
 });
 //function for setting up background color in the textbox, also changed the time to militaryT:
@@ -155,7 +142,7 @@ function hoursPerDay () {
             $('.document').addClass('.hour','.past');
 
         }else if (militaryT === timeNow){
-            $('document').addClass('.hour','.presemt');
+            $('document').addClass('.hour','.present');
 
         } else {
             $('document').addClass('.hour','.future');
