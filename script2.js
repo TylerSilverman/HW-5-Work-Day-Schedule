@@ -182,12 +182,12 @@ function setColor () {
         console.log(blockLabelTime)
 
         if (parseInt(blockLabelTime) < currentTime) {
-            $(this).removeClass("past");
+            $(this).removeClass("future");
             $(this).removeClass("present");
             $(this).addClass("past");
         } else if (parseInt(blockLabelTime) === currentTime) {
             $(this).removeClass("past");
-            // $(this).removeClass("future");
+            $(this).removeClass("future");
             $(this).addClass("present");
         } else {
             $(this).removeClass('past');
