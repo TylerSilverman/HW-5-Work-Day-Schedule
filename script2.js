@@ -141,10 +141,11 @@ $(document).ready(function(){
     var timeNow = moment().hour();  
 });
 
-// var hoursPerDay:[
-// {militaryT:09},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
-// ];
+//function to check the time with past, present, funture and the current time to show the correct color field 
 
+// var militaryT: [
+//     {militaryT:09},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
+// ];
 
 function checkTime () {
     timeNow = moment().hour();
@@ -152,8 +153,10 @@ function checkTime () {
 
         if (militaryT < timeNow){
             $('.document').addClass('.hour','.past');
+
         }else if (militaryT === timeNow){
             $('document').addClass('.hour','.presemt');
+            
         } else {
             $('document').addClass('.hour','.future');
         };
