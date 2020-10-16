@@ -71,7 +71,7 @@ var hoursPerDay = [
 // function to set up save button 
 $(document).ready(function(){
     $(".saveBtn").click(function(){
-        // console.log("save button cliked");
+        console.log("save button cliked");
     });
 });
 
@@ -169,25 +169,36 @@ var militaryT = [
     {militaryT:9},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
 ];
 
-function seCurrentColor () {
-    time = moment().hour();
-    seCurrentColor.forEach(function (){
 
-        if (militaryT < time){
-            $('.document').addClass('.hour','.past');
 
-        }else if (militaryT === time){
-            $('document').addClass('.hour','.present');
+function setColor () {
+    var currentTime = moment().hour();
+    $(".time-block").each(function () {
 
+        console.log($(this).attr("id"))
+
+        var blockLabelTime = $(this).attr("id").split(":")[1];
+
+        console.log(blockLabelTime)
+
+        if (parseInt(blockLabelTime) < currentTime) {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("past");
+        } else if (parseInt(blockLabelTime) === currentTime) {
+            $(this).removeClass("past");
+            // $(this).removeClass("future");
+            $(this).addClass("present");
         } else {
-            $('document').addClass('.hour','.future');
-        };
-    });
-};
+            $(this).removeClass('past');
+            $(this).removeClass('present');
+            $(this).addClass("future");
+        }      
+    })  
+}
+    // setColor ()
 
-
-
-
+    // setInterval(setColor, 60000)
 
 
 
