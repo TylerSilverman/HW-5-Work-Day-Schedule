@@ -75,6 +75,36 @@ $(document).ready(function(){
     });
 });
 
+//added function to keep the information after reloading the page 
+
+var textContent = localStorage.getItem ("#textInformation10am");
+$("#textInformation10am").val(textContent);
+
+var textContent = localStorage.getItem ("#textInformation10am");
+$("#textInformation10am").val(textContent); 
+
+var textContent = localStorage.getItem ("#textInformation11am");
+$("#textInformation11am").val(textContent); 
+
+var textContent = localStorage.getItem ("#textInformation12pm");
+$("#textInformation12pm").val(textContent); 
+
+var textContent = localStorage.getItem ("#textInformation1pm");
+$("#textInformation1pm").val(textContent); 
+
+var textContent = localStorage.getItem ("#textInformation2pm");
+$("#textInformation2pm").val(textContent); 
+
+var textContent = localStorage.getItem ("#textInformation3pm");
+$("#textInformation3pm").val(textContent); 
+
+var textContent = localStorage.getItem ("#textInformation4pm");
+$("#textInformation4pm").val(textContent); 
+
+var textContent = localStorage.getItem ("#textInformation5pm");
+$("#textInformation5pm").val(textContent); 
+
+
 
 
 // adding the function to save for the local stoarge
