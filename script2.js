@@ -71,76 +71,95 @@ var hoursPerDay = [
 // function to set up save button 
 $(document).ready(function(){
     $(".saveBtn").click(function(){
-        console.log("save button cliked");
+        // console.log("save button cliked");
     });
 });
 
 // function for textbox info for each time to save when clicking save button 
 $(document).ready(function(){
     $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation9am").val());
-        if (textInformation !=""){
-            console.log(textInformation);
+        var textInformation9am = $.trim($("#textInformation9am").val());
+        if (textInformation9am !=""){
+            console.log(textInformation9am);
+        } 
+    });
+    $(".saveBtn").click(function(){
+        var textInformation10am = $.trim($("#textInformation10am").val());
+        if (textInformation10am !=""){
+            console.log(textInformation10am);
+        } 
+       
+    });
+    $(".saveBtn").click(function(){
+        var textInformation11am = $.trim($("#textInformation11am").val());
+        if (textInformation11am !=""){
+            console.log(textInformation11am);
         }
     });
     $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation10am").val());
-        if (textInformation !=""){
-            console.log(textInformation);
+        var textInformation12pm = $.trim($("#textInformation12pm").val());
+        if (textInformation12pm !=""){
+            console.log(textInformation12pm);
         }
     });
     $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation11am").val());
-        if (textInformation !=""){
-            console.log(textInformation);
+        var textInformation1pm = $.trim($("#textInformation1pm").val());
+        if (textInformation1pm !=""){
+            console.log(textInformation1pm);
         }
     });
     $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation12pm").val());
-        if (textInformation !=""){
-            console.log(textInformation);
+        var textInformation2pm = $.trim($("#textInformation2pm").val());
+        if (textInformation2pm !=""){
+            console.log(textInformation2pm);
         }
     });
     $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation1pm").val());
-        if (textInformation !=""){
-            console.log(textInformation);
+        var textInformation3pm = $.trim($("#textInformation3pm").val());
+        if (textInformation3pm !=""){
+            console.log(textInformation3pm);
         }
     });
     $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation2pm").val());
-        if (textInformation !=""){
-            console.log(textInformation);
+        var textInformation4pm = $.trim($("#textInformation4pm").val());
+        if (textInformation4pm !=""){
+            console.log(textInformation4pm);
         }
     });
     $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation3pm").val());
-        if (textInformation !=""){
-            console.log(textInformation);
-        }
-    });
-    $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation4pm").val());
-        if (textInformation !=""){
-            console.log(textInformation);
-        }
-    });
-    $(".saveBtn").click(function(){
-        var textInformation = $.trim($("#textInformation5pm").val());
-        if (textInformation !=""){
-            console.log(textInformation);
+        var textInformation5pm = $.trim($("#textInformation5pm").val());
+        if (textInformation5pm !=""){
+            console.log(textInformation5pm);
         };
     });
 });
 
-//save to local storage and then get it from local storage 
+//save to local storage and then get it from local storage
     $('#hour9am').click(function(){
-        var save = $("#textInformation9am").val();
+        var textInformation = $("#textInformation9am").val();
 
-        document.getElementById("textInformation9am").innerHTML = save;
+        document.getElementById("textInformation9am").innerHTML = localStorage;;
 
-        alert("events are saved, correctly!");
+        // console.log("events are saved, correctly!");
     });
+    $('#hour10am').click(function(){
+        var textInformation = $("#textInformation10am").val();
+
+        document.getElementById("textInformation10am").innerHTML = localStorage;;
+
+        // console.log("events are saved, correctly!");
+    });
+
+    // trying another funtion to savelocal storage inside the HTML 
+
+    // $('#hour9am').click(function(){
+    //     var textInformation = $("#textInformation9am").val();
+
+    //     document.getElementById("textInformation9am").innerHTML = localStorage;;
+
+    //     console.log("events are saved, correctly!");
+    // });
+
 
 //function for setting up background color in the textbox, also changed the time to militaryT:
 $(document).ready(function(){
