@@ -196,9 +196,9 @@ function setColor () {
         }      
     })  
 }
-    // setColor ()
+    setColor ()
 
-    // setInterval(setColor, 60000)
+    setInterval(setColor, 60000);
 
 
 
