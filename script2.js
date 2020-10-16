@@ -77,8 +77,8 @@ $(document).ready(function(){
 
 //added function to keep the information after reloading the page 
 
-var textContent = localStorage.getItem ("#textInformation10am");
-$("#textInformation10am").val(textContent);
+var textContent = localStorage.getItem ("#textInformation9am");
+$("#textInformation9am").val(textContent);
 
 var textContent = localStorage.getItem ("#textInformation10am");
 $("#textInformation10am").val(textContent); 
@@ -105,8 +105,6 @@ var textContent = localStorage.getItem ("#textInformation5pm");
 $("#textInformation5pm").val(textContent); 
 
 
-
-
 // adding the function to save for the local stoarge
 //save to local storage and then get it from local storage // function for textbox info for each time to save when clicking save button and also the function to remove the text and console.log the information
 $(document).ready(function(){
@@ -123,30 +121,37 @@ $(document).ready(function(){
     $('#hour11am').click(function(){
         var textInformation11am = $("#textInformation11am").val();
         console.log(textInformation11am + " " + "Events are saved!");
+        localStorage.setItem("#textInformation11am", textInformation11am);
     });
     $('#hour12pm').click(function(){
         var textInformation12pm = $("#textInformation12pm").val();
         console.log(textInformation12pm + " " + "events are saved!");
+        localStorage.setItem("#textInformation12pm", textInformation12pm);
     });
     $('#hour1pm').click(function(){
         var textInformation1pm = $("#textInformation1pm").val();
         console.log(textInformation1pm + " " + "Events are saved!");
+        localStorage.setItem("#textInformation1pm", textInformation1pm);
     });
     $('#hour2pm').click(function(){
         var textInformation2pm = $("#textInformation2pm").val();
         console.log(textInformation2pm + " " + "events are saved!");
+        localStorage.setItem("#textInformation2pm", textInformation2pm);
     });
     $('#hour3pm').click(function(){
         var textInformation3pm = $("#textInformation3pm").val();
         console.log(textInformation3pm + " " + "Events are saved!");
+        localStorage.setItem("#textInformation3pm", textInformation3pm);
     });
     $('#hour4pm').click(function(){
         var textInformation4pm = $("#textInformation4pm").val();
         console.log(textInformation4pm + " " + "events are saved!");
+        localStorage.setItem("#textInformation4pm", textInformation4pm);
     });
     $('#hour5pm').click(function(){
         var textInformation5pm = $("#textInformation5pm").val();
         console.log(textInformation5pm + " " + "events are saved!");
+        localStorage.setItem("#textInformation5pm", textInformation5pm);
     });
 });
 //function for setting up background color in the textbox, also changed the time to militaryT:
@@ -164,9 +169,9 @@ var militaryT = [
     {militaryT:9},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
 ];
 
-function hoursPerDay () {
+function seCurrentColor () {
     timeNow = moment().hour();
-    hoursPerDay.forEach(function (){
+    seCurrentColor.forEach(function (){
 
         if (militaryT < timeNow){
             $('.document').addClass('.hour','.past');
