@@ -170,13 +170,13 @@ var militaryT = [
 ];
 
 function seCurrentColor () {
-    timeNow = moment().hour();
+    time = moment().hour();
     seCurrentColor.forEach(function (){
 
-        if (militaryT < timeNow){
+        if (militaryT < time){
             $('.document').addClass('.hour','.past');
 
-        }else if (militaryT === timeNow){
+        }else if (militaryT === time){
             $('document').addClass('.hour','.present');
 
         } else {
