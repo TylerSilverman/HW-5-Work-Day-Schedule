@@ -103,7 +103,7 @@ $(document).ready(function(){
     });
     $('#hour1pm').click(function(){
         var textInformation1pm = $("#textInformation1pm").val();
-        document.getElementById("textInformation1pm").innerHTML = localStorage;;
+        document.getElementById("textInformation1pm").innerHTML = localStorage.getItem;;
         console.log(textInformation1pm + " " + "Events are saved!");
         $("#textInformation1pm").val("");
     });
@@ -143,11 +143,11 @@ $(document).ready(function(){
 
 //function to check the time with past, present, funture and the current time to show the correct color field 
 
-// var militaryT: [
-//     {militaryT:09},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
-// ];
+var militaryT = [
+    {militaryT:9},{militaryT:10},{militaryT:11},{militaryT:12},{militaryT:13},{militaryT:14},{militaryT:15},{militaryT:16},{militaryT:17},
+];
 
-function checkTime () {
+function hoursPerDay () {
     timeNow = moment().hour();
     hoursPerDay.forEach(function (){
 
@@ -156,7 +156,7 @@ function checkTime () {
 
         }else if (militaryT === timeNow){
             $('document').addClass('.hour','.presemt');
-            
+
         } else {
             $('document').addClass('.hour','.future');
         };
